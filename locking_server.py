@@ -19,7 +19,7 @@ class LockerServer(object):
     DEFAULT_LOCK = '_DEFAULT_'
     CLOSE = 'CLOSE'
 
-    def __init__(self, url="tcp://192.168.1.14:789"):
+    def __init__(self, url="tcp://127.0.0.1:7899"):
         self._locks = {}
         self._url = url
         self._logger = None
