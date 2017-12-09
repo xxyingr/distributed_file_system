@@ -2,7 +2,18 @@ import threading
 import time
 import random
 
-from filedb import loadFileDb
+import imp,traceback
+
+def loadFileDb(id,*args,**kwargs):
+    
+    try:
+        fp, pathname, description = imp.find_module(id,__path__)
+        assert fp
+        return getattr(imp.load_module(id.replace(".",""),fp, pathname, description),"%sFileDb" % id)(*args,**kwargs)
+    except Exception, err:
+        print "error while loading filedb : %s" % err
+        traceback.print_exc()
+        return False
     
 
 class Replicator(threading.Thread):
