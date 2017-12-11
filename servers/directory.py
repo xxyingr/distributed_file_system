@@ -26,7 +26,7 @@ class Server(object):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sock.bind((self.HOST, port_use))
         self.handler = handler if handler else self.default_handler
-        # Create a queue of tasks with ma
+        # Create a queue of tasks
         self.threadQueue = Queue.Queue(maxsize=self.MAX_THREAD)
 
         # Create thread pool
