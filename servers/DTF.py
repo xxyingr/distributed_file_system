@@ -131,7 +131,7 @@ def main():
     try:
         if len(sys.argv) > 1 and sys.argv[1].isdigit():
             port = int(sys.argv[1])
-            server = TCPServer(port)
+            server = Server(port)
         else:
             server = Server()
         server.listen()
