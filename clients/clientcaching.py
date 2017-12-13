@@ -144,7 +144,7 @@ class File(SpooledTemporaryFile):
                 self.last_modified = response.getheader('Last-Modified')
                 status = response.status
 
-def from_cache(filepath):
+    def from_cache(filepath):
         """Try to retrieve a file from the cache
            filepath: the path of the file to retrieve from cache.
            Return None if the file isn't in the cache or if the cache expired.
@@ -184,5 +184,6 @@ open = File
 File._cache = {}
 _config = {
     'filedb': None,
-    'max_size': 1024*2
+    'max_size': 1024**2
 }
+File._cache = {}
