@@ -10,15 +10,13 @@ Introduction
 
 1. this repository includes: 
 
-	1> locking server.py and locking client.py(this is independent with other three servers); 
+	1> locking server.py and locking client.py(this is independent with other three features); 
 	
-	2> distributed transparent file access.py; 
+	2> distributed transparent file access.py;  
 	
-	3> directory server.py; 
+	3> replication server.py; 
 	
-	4> replication server.py; 
-	
-	5> clientcaching.py (this client can implement caching, but there is still basic functions; 
+	4> caching.py (this client can implement caching, but there is still basic functions; 
 	that need to be modified, and may appear some mistakes when the client is running). 
 
 2. run locking: 
